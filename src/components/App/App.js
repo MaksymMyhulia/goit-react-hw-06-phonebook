@@ -1,3 +1,12 @@
+import { useDispatch, useSelector } from 'react-redux';
+import { addContact, deleteContact } from 'redux/contacts/contacts-actions';
+
+import {
+  getContacts,
+  getFilteredContacts,
+} from 'redux/contacts/contacts-selectors';
+
+
 import { useState } from "react";
 import { GlobalStyle } from "./GlobalStyle";
 import { ContactForm } from "components/ContactForm/ContactForm";
@@ -16,6 +25,8 @@ import { nanoid } from "nanoid";
 import initialContacts from "data/contacts.json";
 
 export default function App () {
+const contacts = useSelector(getContacts);
+const filteredContacts = useSelector(getFilteredContacts);
  const [contacts, setContacts] = useLocalStorage("contacts", initialContacts);
  const [filter, setFilter] = useState("");
 

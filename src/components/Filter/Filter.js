@@ -6,7 +6,7 @@ export const Filter = ({ value, onChange }) => {
     return (
         <LabelDescription>
             <LabelWrapper>
-                Find contacts by mame
+                Find contacts by name
             </LabelWrapper>
             <Input type="text" value={value} onChange={onChange}/>
         </LabelDescription>
