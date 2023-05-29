@@ -23,7 +23,7 @@ const contacts = useSelector(getContacts);
           <Filter />
           <ContactList />
         </>
-        };
+        }
       </Section>
       <ToastContainer />
       <GlobalStyle />
