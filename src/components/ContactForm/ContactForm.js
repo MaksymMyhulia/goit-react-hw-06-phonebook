@@ -1,6 +1,5 @@
 import React from "react";
 import { Formik } from "formik";
-import PropTypes from "prop-types";
 import * as Yup from 'yup';
 
 import { toast } from 'react-toastify';
@@ -8,8 +7,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import { toastifyOptions } from 'utils/toastifyOptions';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { addContact } from 'components/redux/contacts/contacts-slice';
-import { getContacts } from 'components/redux/contacts/contacts-selectors';
+import { addContact } from 'redux/contacts/contacts-slice';
+import { getContacts } from 'redux/contacts/contacts-selectors';
 
 
 import {
@@ -115,6 +114,3 @@ const onAddContact = ({ name, number }) => {
     )
 }
 
-ContactForm.propTypes = {
-    onAddContact: PropTypes.func.isRequired,
-}
